@@ -95,6 +95,8 @@ sas_text = strrep(sas_text,'#grouping', ...
 sas_text = strrep(sas_text,'#ods_string_1',sas_ods_string_1);
 sas_text = strrep(sas_text,'#ods_string_2',sas_ods_string_2);    
         
+sas_text = sas_text
+
 % Output
 
 % Create the sas code in the directory of the function
