@@ -104,7 +104,7 @@ if (strcmp(p.Results.results_type,'html'))
     
     counter=numel(out.p_table.tests);
     for f1=1:numel(f1_strings)
-        tag_string = sprintf('%s %s',p.Results.factor_1,f1_strings{f1})
+        tag_string = sprintf('%s %s',p.Results.factor_1,f1_strings{f1});
         temp_strings = pull_table_strings_from_html( ...
             out.results_file_string,tag_string, ...
                 [8 nchoosek(numel(f2_strings),2)]);
@@ -120,7 +120,7 @@ if (strcmp(p.Results.results_type,'html'))
     
     counter=numel(out.p_table.tests);
     for f2=1:numel(f2_strings)
-        tag_string = sprintf('%s %s',p.Results.factor_2,f2_strings{f2})
+        tag_string = sprintf('%s %s',p.Results.factor_2,f2_strings{f2});
         temp_strings = pull_table_strings_from_html( ...
             out.results_file_string,tag_string, ...
             [8 nchoosek(numel(f1_strings),2)]);
