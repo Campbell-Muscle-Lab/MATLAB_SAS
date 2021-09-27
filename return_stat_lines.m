@@ -40,9 +40,11 @@ switch mode_string
         end
 
         for i=1:length(vi)
-            line_string = p_strings{vi(i)}
-            temp_strings = textscan(line_string,'%s')
-            temp_strings = temp_strings{:}
+            line_string = p_strings{vi(i)};
+            temp_strings = textscan(line_string,'%s');
+            temp_strings = temp_strings{:};
+            
+            sub_label = sub_label;
             
             if (strcmp(temp_strings{1},sub_label))
                 mg1 = find(strcmp(main_strings,temp_strings{3}));

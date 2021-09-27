@@ -65,7 +65,7 @@ if (strcmp(p.Results.results_type,'html'))
             'filename',p.Results.excel_file_string, ...
             'sheet',p.Results.excel_sheet, ...
             'treat_NaNs_as_strings',1);
-    f1_strings = unique(d.(p.Results.factor_1));
+    f1_strings = unique(d.(p.Results.factor_1))
     
     counter=numel(out.p_table.tests);
     tag_string = sprintf('Adjustment for Multiple Comparisons');
@@ -84,4 +84,5 @@ if (strcmp(p.Results.results_type,'html'))
     out.p_table.tests = out.p_table.tests';
     out.p_table.p = out.p_table.p';
     out.p_table = struct2table(out.p_table);
+    out.f1_strings = f1_strings;
 end

@@ -141,4 +141,6 @@ if (strcmp(p.Results.results_type,'html'))
     out.p_table.tests = out.p_table.tests';
     out.p_table.p = out.p_table.p';
     out.p_table = struct2table(out.p_table);
+    out.f1_strings = f1_strings;
+    out.f2_strings = f2_strings;
 end
