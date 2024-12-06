@@ -62,9 +62,8 @@ if (strcmp(p.Results.results_type,'html'))
     % Pull post-hoc tests
        
     % First look for factor_1 and factor_2 entries
-    d = read_structure_from_excel( ...
-            'filename',p.Results.excel_file_string, ...
-            'sheet',p.Results.excel_sheet);
+    d = readtable(p.Results.excel_file_string, 'Sheet', p.Results.excel_sheet)
+
     f1_strings = unique(d.(p.Results.factor_1))
     f2_strings = unique(d.(p.Results.factor_2))
     if (p.Results.treat_f2_numbers_as_strings)
