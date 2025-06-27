@@ -111,7 +111,9 @@ fclose(out_file);
 
 % Construct a command line
 command_string = p.Results.sas_command_line;
-command_string = sprintf('%s -sysin %s',command_string,sas_file_string);
+command_string = sprintf('%s -sysin "%s"',command_string,sas_file_string);
+
+command_string
 
 % Run command
 [status,cmdout] = system(command_string);
